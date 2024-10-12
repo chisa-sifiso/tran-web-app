@@ -11,6 +11,7 @@ function UserDashboard() {
       {/* Main Dashboard Content */}
       <div style={{ flex: 1, padding: "20px" }}>
         <h1>User Dashboard</h1>
+        
         {/* Add user-specific functionalities here */}
       </div>
     </div>

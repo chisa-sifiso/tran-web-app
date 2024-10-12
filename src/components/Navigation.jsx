@@ -23,7 +23,7 @@ function Navigation({ userEmail }) {
       {/* Navigation Links */}
       <div style={{ flexGrow: 1, width: "100%", textAlign: "center" }}>
         <Link
-          to="/overvi"
+          to="/overview"
           style={{
             color: "white",
             textDecoration: "none",

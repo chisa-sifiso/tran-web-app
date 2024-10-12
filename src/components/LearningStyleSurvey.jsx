@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
 function LearningStyleSurvey() {
   const [visualScore, setVisualScore] = useState(0);
   const [auditoryScore, setAuditoryScore] = useState(0);
   const [kinestheticScore, setKinestheticScore] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+
+  const navigate = useNavigate(); // Initialize navigate
 
   const handleAnswer = (learningStyle, value) => {
     if (learningStyle === "visual") setVisualScore(visualScore + value);
@@ -15,6 +18,11 @@ function LearningStyleSurvey() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+
+    // Navigate to user dashboard after 3 seconds
+    setTimeout(() => {
+      navigate("/user-dashboard"); // Replace with your actual UserDashboard route
+    }, 3000); // 3-second delay before navigating
   };
 
   const getLearningStyle = () => {
@@ -33,7 +41,10 @@ function LearningStyleSurvey() {
     return (
       <div style={{ textAlign: "center", padding: "20px" }}>
         <h2>Your Learning Style</h2>
-        <p>Based on your answers, you are a <strong>{getLearningStyle()}</strong>.</p>
+        <p>
+          Based on your answers, you are a <strong>{getLearningStyle()}</strong>.
+        </p>
+        <p>Redirecting to your dashboard in 3 seconds...</p>
       </div>
     );
   }
