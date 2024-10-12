@@ -14,7 +14,7 @@ function Login({ onLogin }) {
       navigate("/admin-dashboard");
     } else if (username === "user" && password === "user123") {
       onLogin("user");
-      navigate("/user-dashboard");
+      navigate("/leaning");
     } else {
       setError("Invalid credentials");
     }

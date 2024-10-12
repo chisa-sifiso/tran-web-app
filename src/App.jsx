@@ -5,8 +5,8 @@ import AdminDashboard from "./components/AdminDashboard";
 import UserDashboard from "./components/UserDashboard";
 import ForgotPassword from "./components/ForgotPassword"; 
 import Register from "./components/Register"; // Import this
+import Learning from "./components/LearningStyleSurvey";
 import './index.css';
-
 
 function App() {
   const [userType, setUserType] = useState(null); // 'admin' or 'user' based on login
@@ -31,6 +31,7 @@ function App() {
         />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/leaning" element={<Learning />} />
       </Routes>
     </Router>
   );
