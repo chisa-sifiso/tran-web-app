@@ -42,7 +42,7 @@ function Navigation({ userEmail }) {
         </Link>
 
         <Link
-          to="/sensor"
+          to="/timetable"
           style={{
             color: "white",
             textDecoration: "none",
@@ -61,7 +61,7 @@ function Navigation({ userEmail }) {
         </Link>
 
         <Link
-          to="/learning-material"
+          to="/camera"
           style={{
             color: "white",
             textDecoration: "none",
@@ -80,7 +80,7 @@ function Navigation({ userEmail }) {
         </Link>
 
         <Link
-          to="/settings"
+          to="/setting"
           style={{
             color: "white",
             textDecoration: "none",
